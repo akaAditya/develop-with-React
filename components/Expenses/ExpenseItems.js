@@ -21,6 +21,7 @@ const changeExpense = () =>{
   return (
     <>
       <Cards className="expense-item">
+        
         <ExpenseDate date={props.date} />
         
         <div className="expense-item__description" id="items">
