@@ -46,7 +46,7 @@ const Expenses = () => {
     <>
       <h1>Expense Items!</h1>
       <Cards className="expenses">
-        {Object.keys(expenses).map((expense) => {
+        {Object.keys(expenses).map((expense, key) => {
           return (
             <ExpenseItems
               title={expenses[expense].title}
@@ -56,7 +56,6 @@ const Expenses = () => {
               ></ExpenseItems>
               );
             })}
-
       </Cards>
     </>
   );
