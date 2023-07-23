@@ -1,6 +1,7 @@
 import React from "react";
 import ExpenseItems from "./ExpenseItems";
 import Cards from "../UI/Cards";
+import "./Expense.css";
 
 const Expenses = () => {
   const expenses = [
@@ -41,9 +42,10 @@ const Expenses = () => {
     },
   ];
 
-    return (
-      <Cards>
-        <h1>Expense Items!</h1>
+  return (
+    <>
+      <h1>Expense Items!</h1>
+      <Cards className="expenses">
         {Object.keys(expenses).map((expense) => {
           return (
             <ExpenseItems
@@ -51,13 +53,14 @@ const Expenses = () => {
               price={expenses[expense].price}
               date={expenses[expense].date}
               LocationOfExpenditure={expenses[expense].LocationOfExpenditure}
-            ></ExpenseItems>
-          );
-        })}
+              ></ExpenseItems>
+              );
+            })}
+
       </Cards>
-    );
-  
-}
+    </>
+  );
+};
 
 export default Expenses;
 

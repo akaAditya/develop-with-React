@@ -6,6 +6,10 @@ import "./Expenses";
 import './ExpenseItems.css'
 
 const ExpenseItems= (props) => {
+
+  const deleteBtn = () => {
+    console.log('Delete Expense');
+    }
   return (
     <>
       <Cards className="expense-item">
@@ -15,6 +19,8 @@ const ExpenseItems= (props) => {
           price={props.price}
           LocationOfExpenditure={props.LocationOfExpenditure}
         />
+            <button onClick={deleteBtn}>Delete</button>
+
       </Cards>
     </>
   );

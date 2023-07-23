@@ -3,7 +3,7 @@ import React from "react";
 const ExpenseDetails = (props) => {
   return (
     <>
-      <div className="expense-item__description">
+      <div className="expense-item__description" id="items">
             <h2>{props.title}</h2>
             <div className="expense-item__price">
                 <h2>${props.price}</h2>
