@@ -8,9 +8,11 @@ import "./ExpenseItems.css";
 const ExpenseItems = (props) => {
 
   const [title, setTitle] = useState(props.title);
+  const updateTitle = () =>{
+    setTitle('updated')
+  }
   const deleteBtn = () => {
-    console.log(title);
-    setTitle('updated');
+    console.log('delete');
   };
 
 const [price, setPrice] = useState(props.price);
@@ -34,6 +36,7 @@ const changeExpense = () =>{
             </div>
       </div>
         <button onClick={changeExpense}>$100</button>
+        <button onClick={updateTitle}>Update Title</button>
         <button onClick={deleteBtn}>Delete</button>
       </Cards>
     </>
