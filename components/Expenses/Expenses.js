@@ -3,58 +3,22 @@ import ExpenseItems from "./ExpenseItems";
 import Cards from "../UI/Cards";
 import "./Expense.css";
 
-const Expenses = () => {
-  const expenses = [
-    {
-      id: "1",
-      title: "Car Insurance",
-      price: 299,
-      date: new Date(2023, 7, 21),
-      LocationOfExpenditure: "PhonePe",
-    },
-    {
-      id: "2",
-      title: "Grocery",
-      price: 599,
-      date: new Date(2023, 7, 21),
-      LocationOfExpenditure: "Super Market",
-    },
-    {
-      id: "3",
-      title: "Internet Bills",
-      price: 199,
-      date: new Date(2023, 7, 21),
-      LocationOfExpenditure: "Jio",
-    },
-    {
-      id: "4",
-      title: "Travel",
-      price: 99,
-      date: new Date(2023, 7, 21),
-      LocationOfExpenditure: "Metro",
-    },
-    {
-      id: "5",
-      title: "Electronics",
-      price: 89,
-      date: new Date(2023, 7, 21),
-      LocationOfExpenditure: "Amazon electronics",
-    },
-  ];
+const Expenses = (props) => {
 
   return (
     <>
       <Cards className="expenses">
-        {Object.keys(expenses).map((expense, key) => {
+        {Object.keys(props.items).map((expense, key) => {
           return (
             <ExpenseItems
-              title={expenses[expense].title}
-              price={expenses[expense].price}
-              date={expenses[expense].date}
-              LocationOfExpenditure={expenses[expense].LocationOfExpenditure}
+              title={props.items[expense].title}
+              price={props.items[expense].price}
+              date={props.items[expense].date}
+              LocationOfExpenditure={props.items[expense].LocationOfExpenditure}
               ></ExpenseItems>
               );
             })}
+            
       </Cards>
     </>
   );

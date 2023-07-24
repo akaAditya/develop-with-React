@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-function ExpenseForm() {
+function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [eneteredDate, setEnteredDate] = useState("");
 
+  // Using useState() function multiple to single:
   //   const [userInput, setUserInput] = useState({
   //     enteredTitle: "",
   //     enteredAmount: "",
   //     eneteredDate: "",
   //   });
 
-  // 1 way
+  // 1st way
   // const addTitle = (event)=>setUserInput({
   //     ...userInput,
   //     enteredTitle : event.target.value
   // })
 
-  // 2 way
+  // 2nd way
   //   const addTitle = (event) =>
   //     setUserInput((previous) => {
   //       return {
@@ -27,7 +28,7 @@ function ExpenseForm() {
   //       };
   //     });
 
-  // 3 way
+  // 3rd way
   const addTitle = (event) => {
     setEnteredTitle(event.target.value);
     //   console.log(enteredTitle);
@@ -51,7 +52,10 @@ function ExpenseForm() {
             price : enteredAmount,
             date : new Date(eneteredDate)
     };
-    console.log(expenseData)
+    props.onSubmitExpenseData(expenseData);
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   }
   return (
     <>
@@ -63,6 +67,7 @@ function ExpenseForm() {
               className="new-expense__control input"
               type="text"
               id="title"
+              value={enteredTitle}
               onChange={addTitle}
             />
           </div>
@@ -72,6 +77,7 @@ function ExpenseForm() {
               className="new-expense__control input"
               type="number"
               id="price"
+              value={enteredAmount}
               onChange={addPrice}
             />
           </div>
@@ -83,6 +89,7 @@ function ExpenseForm() {
               min="2021-01-01"
               max="2023-12-31"
               id="date"
+              value={eneteredDate}
               onChange={addDate}
             />
           </div>
