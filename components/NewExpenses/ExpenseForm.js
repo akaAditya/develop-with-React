@@ -29,7 +29,6 @@ function ExpenseForm(props) {
   //     });
 
   // 3rd way
-  
 
   const addTitle = (event) => {
     setEnteredTitle(event.target.value);
@@ -46,19 +45,19 @@ function ExpenseForm(props) {
     // console.log(eneteredDate);
   };
 
-  const submitHandler = (event)=>{
+  const submitHandler = (event) => {
     event.preventDefault();
-    
+
     const expenseData = {
-            title : enteredTitle,
-            price : enteredAmount,
-            date : new Date(eneteredDate)
+      title: enteredTitle,
+      price: +enteredAmount,
+      date: new Date(eneteredDate),
     };
     props.onSubmitExpenseData(expenseData);
-    setEnteredTitle('');
-    setEnteredAmount('');
-    setEnteredDate('');
-  }
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
+  };
   return (
     <>
       <form onSubmit={submitHandler}>
