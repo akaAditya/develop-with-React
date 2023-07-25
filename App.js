@@ -15,14 +15,14 @@ const dailyExpense = [
     id: "2",
     title: "Grocery",
     price: 599,
-    date: new Date(2019, 7, 21),
+    date: new Date(2021, 7, 21),
     LocationOfExpenditure: "Super Market",
   },
   {
     id: "3",
     title: "Internet Bills",
     price: 199,
-    date: new Date(2020, 7, 21),
+    date: new Date(2023, 7, 21),
     LocationOfExpenditure: "Jio",
   },
   {
@@ -36,7 +36,7 @@ const dailyExpense = [
     id: "5",
     title: "Electronics",
     price: 89,
-    date: new Date(2022, 7, 21),
+    date: new Date(2023, 7, 21),
     LocationOfExpenditure: "Amazon electronics",
   },
 ];

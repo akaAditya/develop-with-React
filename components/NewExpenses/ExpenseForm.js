@@ -29,6 +29,8 @@ function ExpenseForm(props) {
   //     });
 
   // 3rd way
+  
+
   const addTitle = (event) => {
     setEnteredTitle(event.target.value);
     //   console.log(enteredTitle);
@@ -86,7 +88,7 @@ function ExpenseForm(props) {
             <input
               className="new-expense__control input"
               type="date"
-              min="2021-01-01"
+              min="2020-01-01"
               max="2023-12-31"
               id="date"
               value={eneteredDate}
@@ -94,6 +96,7 @@ function ExpenseForm(props) {
             />
           </div>
           <div className="new-expense__actions">
+            <button onClick={props.onHidingForm}>Cancel</button>
             <button type="submit">Add Expense</button>
           </div>
         </div>
