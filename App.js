@@ -8,7 +8,7 @@ const dailyExpense = [
     id: "1",
     title: "Car Insurance",
     price: 299,
-    date: new Date(2023, 7, 21),
+    date: new Date(2022, 7, 21),
     LocationOfExpenditure: "PhonePe",
   },
   {
@@ -29,7 +29,7 @@ const dailyExpense = [
     id: "4",
     title: "Travel",
     price: 99,
-    date: new Date(2020, 7, 21),
+    date: new Date(2022, 7, 21),
     LocationOfExpenditure: "Metro",
   },
   {
